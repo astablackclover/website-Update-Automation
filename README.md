@@ -1,6 +1,13 @@
 # website-Update-Automation
-This is a basic implementation of a personal financial budget tracker in Python using the matplotlib library for creating pie charts and csv module for exporting data to a CSV file. This implementation allows you to input your expenses, displays a pie chart showing the distribution of expenses, and exports the expenses data to a CSV file.I added functions for loading expenses from a CSV file, analyzing expenses (total expenses, highest/lowest expense category), editing expenses, and deleting expenses.
-Expenses are loaded from the CSV file at the beginning of the script, and new expenses are recorded during the execution.
-After recording and updating expenses, the script displays a pie chart of expenses, exports the updated expenses to a CSV file, analyzes the expenses, allows the user to edit and delete expenses, and then displays the updated pie chart and exports the final expenses to a CSV file again.
+This script defines a function scrape_articles(url) that takes a URL as input, sends a GET request to that URL, and then uses BeautifulSoup to parse the HTML content of the webpage. It assumes that article titles are wrapped in <article> tags and each article has a <h2> tag containing the title. It then extracts the titles and returns them as a list.
 
-**Further more you might need to handle authentication if the API requires it.**
+In the if __name__ == "__main__": block, the script prompts the user to input the URL of the website to scrape. It then calls the scrape_articles() function with this URL and prints out the article titles if any are scraped.
+
+The fetch_and_print_updates function is responsible for scraping articles from the given URL and printing the titles.
+We initially call fetch_and_print_updates to perform the first scraping.
+We schedule the fetch_and_print_updates function to run every hour using schedule.every().hour.do(fetch_and_print_updates, url).
+The script runs an infinite loop, checking if there are any scheduled tasks to run and sleeps for 1 second between iterations to prevent excessive CPU usage.
+With this setup, your scraping script will automatically run and fetch updates from the specified URL every hour. You can adjust the scheduling interval as needed.
+
+                               
+                                                                **Further more you might need to handle authentication if the API requires it**
