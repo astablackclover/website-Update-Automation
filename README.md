@@ -10,4 +10,4 @@ The script runs an infinite loop, checking if there are any scheduled tasks to r
 With this setup, your scraping script will automatically run and fetch updates from the specified URL every hour. You can adjust the scheduling interval as needed.
 
                                
-                                                                **Further more you might need to handle authentication if the API requires it**
+        **Further more you might need to handle authentication if the API requires it**
